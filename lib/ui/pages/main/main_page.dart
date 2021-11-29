@@ -8,15 +8,12 @@ class MainPage extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  final initialIndex = 1;
-
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
       routes: const [
-        ManagerRouter(),
-        PlaygroundRouter(),
-        DebugRouter(),
+        HelloWorldRouter(),
+        CounterRouter(),
       ],
       builder: (context, child, animation) {
         return WillPopScope(
@@ -52,40 +49,19 @@ class MainPage extends StatelessWidget {
       items: [
         BottomNavBarItem(
           activeColor: Colors.blue,
-          title: const Text('Debug'),
+          title: const Text('Hello World'),
           icon: const Icon(Icons.access_alarm),
         ),
         BottomNavBarItem(
           activeColor: Colors.blue,
-          title: const Text('Management'),
+          title: const Text('Counter'),
           icon: const Icon(Icons.ac_unit),
         ),
-        BottomNavBarItem(
-          activeColor: Colors.blue,
-          title: const Text('Playground'),
-          icon: const Icon(Icons.account_balance_outlined),
-        ),
       ],
-      selectedIndex: getIndex(tabsRouter.activeIndex),
+      selectedIndex: tabsRouter.activeIndex,
       onIndexChange: (index) async {
-        var newIndex = index - initialIndex;
-        if (newIndex == -1) {
-          newIndex = 2;
-        }
-        var currentIndex = getIndex(tabsRouter.activeIndex);
-        if (index == currentIndex) {
-          var currentRouter = tabsRouter.topMost;
-          while (currentRouter.stack.length > 1) {
-            await currentRouter.pop();
-          }
-        }
-        tabsRouter.setActiveIndex(newIndex);
+        tabsRouter.setActiveIndex(index);
       },
     );
-  }
-
-  int getIndex(int tabsRouterIndex) {
-    var index = (tabsRouterIndex + initialIndex) % 3;
-    return index.toInt();
   }
 }
