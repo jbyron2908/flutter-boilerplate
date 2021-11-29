@@ -4,8 +4,8 @@ import 'package:flutter_boilerplate/ui/navigation/app_router_observer.dart';
 import 'package:flutter_boilerplate/ui/theme/app_theme.dart';
 import 'package:provider/provider.dart';
 
-class AppController extends StatelessWidget {
-  const AppController({
+class RootProvider extends StatelessWidget {
+  const RootProvider({
     Key? key,
     required this.child,
   }) : super(key: key);

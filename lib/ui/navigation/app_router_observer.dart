@@ -99,12 +99,13 @@ class AppRouterObserver extends AutoRouterObserver {
   }
 
   RouteData? _getRouteData(TabPageRoute route) {
-    var router = (_router.topMost is TabsRouter)
-        ? _router.topMost
-        : _router.topMost.parent();
+    var router = (_router.topRoute is TabsRouter)
+        ? _router.topRoute
+        : _router.topRoute.parent;
 
     if (router != null && router is TabsRouter) {
-      var routeStackRoute = router.stackRouterOfIndex(route.index);
+      var tabsRouter = router as TabsRouter;
+      var routeStackRoute = tabsRouter.stackRouterOfIndex(route.index);
       return routeStackRoute?.current;
     }
   }

@@ -19,7 +19,7 @@ class MainPage extends StatelessWidget {
         return WillPopScope(
           onWillPop: () async {
             var tabsRouter = context.tabsRouter;
-            var current = tabsRouter.topMost;
+            var current = tabsRouter.topRoute as StackRouter;
 
             if (current.stack.length > 1) {
               await current.pop();

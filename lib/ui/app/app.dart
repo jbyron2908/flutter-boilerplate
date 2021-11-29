@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/ui/app/app_controller.dart';
+import 'package:flutter_boilerplate/ui/app/root_provider.dart';
 import 'package:flutter_boilerplate/ui/navigation/app_auto_router.gr.dart';
 import 'package:flutter_boilerplate/ui/navigation/app_router_observer.dart';
 import 'package:provider/provider.dart';
 
-class MyFinanceApp extends StatelessWidget {
-  MyFinanceApp({
+class MyApp extends StatelessWidget {
+  MyApp({
     Key? key,
   }) : super(key: key);
 
@@ -13,7 +13,7 @@ class MyFinanceApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppController(
+    return RootProvider(
       child: Builder(
         builder: (context) {
           var routerObserverRegister =
