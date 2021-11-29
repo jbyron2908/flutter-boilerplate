@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_finance_flutter_3/ui/navigation/app_router.dart';
-import 'package:my_finance_flutter_3/ui/widget/wrapper/lifecycle_widget.dart';
+import 'package:flutter_boilerplate/ui/navigation/app_router.dart';
+import 'package:flutter_boilerplate/ui/widget/wrapper/lifecycle_widget.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({

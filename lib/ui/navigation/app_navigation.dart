@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/ui/widget/picker_modal/multi_picker_modal.dart';
+import 'package:flutter_boilerplate/ui/widget/picker_modal/picker_modal.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
-import 'package:my_finance_flutter_3/ui/widget/picker_modal/multi_picker_modal.dart';
-import 'package:my_finance_flutter_3/ui/widget/picker_modal/picker_modal.dart';
 
 class AppNavigation {
   static Future<void> pushTo(

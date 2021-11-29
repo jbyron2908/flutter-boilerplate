@@ -1,5 +1,5 @@
-import 'package:my_finance_flutter_3/core/domain/model/payee/payee_model.dart';
-import 'package:my_finance_flutter_3/core/domain/repository/payee/payee_repository.dart';
+import 'package:flutter_boilerplate/domain/model/payee/payee_model.dart';
+import 'package:flutter_boilerplate/domain/repository/payee/payee_repository.dart';
 import 'package:rxdart/subjects.dart';
 
 class PayeeListController {

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_finance_flutter_3/core/config/log/logger.dart';
-import 'package:my_finance_flutter_3/core/domain/model/payee/payee_model.dart';
-import 'package:my_finance_flutter_3/ui/navigation/app_router.dart';
-import 'package:my_finance_flutter_3/ui/pages/tab_manager/payee/list/payee_list_controller.dart';
-import 'package:my_finance_flutter_3/ui/pages/tab_manager/payee/select/payee_select_page.dart';
-import 'package:my_finance_flutter_3/ui/widget/bottom_action_bar/bottom_action_bar.dart';
-import 'package:my_finance_flutter_3/ui/widget/wrapper/lifecycle_widget.dart';
+import 'package:flutter_boilerplate/config/log/logger.dart';
+import 'package:flutter_boilerplate/domain/model/payee/payee_model.dart';
+import 'package:flutter_boilerplate/ui/navigation/app_router.dart';
+import 'package:flutter_boilerplate/ui/pages/tab_manager/payee/list/payee_list_controller.dart';
+import 'package:flutter_boilerplate/ui/pages/tab_manager/payee/select/payee_select_page.dart';
+import 'package:flutter_boilerplate/ui/widget/bottom_action_bar/bottom_action_bar.dart';
+import 'package:flutter_boilerplate/ui/widget/wrapper/lifecycle_widget.dart';
 import 'package:provider/provider.dart';
 
 class PayeeListPage extends StatelessWidget {

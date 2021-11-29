@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_finance_flutter_3/core/domain/model/category/category_model.dart';
-import 'package:my_finance_flutter_3/ui/widget/picker_modal/multi_picker_modal.dart';
-import 'package:my_finance_flutter_3/ui/widget/picker_modal/picker_modal.dart';
+import 'package:flutter_boilerplate/domain/model/category/category_model.dart';
+import 'package:flutter_boilerplate/ui/widget/picker_modal/multi_picker_modal.dart';
+import 'package:flutter_boilerplate/ui/widget/picker_modal/picker_modal.dart';
 import 'package:provider/provider.dart';
 
 Future<CategoryModel?> showCategorySelector(BuildContext context) {

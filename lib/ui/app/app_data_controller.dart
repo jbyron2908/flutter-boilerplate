@@ -1,16 +1,16 @@
 // import 'package:flutter/material.dart';
-// import 'package:my_finance_flutter_3/core/domain/model/account/account_model.dart';
-// import 'package:my_finance_flutter_3/core/domain/model/category/category_model.dart';
-// import 'package:my_finance_flutter_3/core/domain/model/label/label_model.dart';
-// import 'package:my_finance_flutter_3/core/domain/model/payee/payee_model.dart';
-// import 'package:my_finance_flutter_3/core/domain/model/profile/profile_model.dart';
-// import 'package:my_finance_flutter_3/core/domain/model/template_operation/template_operation_model.dart';
-// import 'package:my_finance_flutter_3/core/domain/repository/account/account_repository.dart';
-// import 'package:my_finance_flutter_3/core/domain/repository/category/category_repository.dart';
-// import 'package:my_finance_flutter_3/core/domain/repository/label/label_repository.dart';
-// import 'package:my_finance_flutter_3/core/domain/repository/payee/payee_repository.dart';
-// import 'package:my_finance_flutter_3/core/domain/repository/profile/profile_repository.dart';
-// import 'package:my_finance_flutter_3/core/domain/repository/template_operation/template_operation_repository.dart';
+// import 'package:flutter_boilerplate/domain/model/account/account_model.dart';
+// import 'package:flutter_boilerplate/domain/model/category/category_model.dart';
+// import 'package:flutter_boilerplate/domain/model/label/label_model.dart';
+// import 'package:flutter_boilerplate/domain/model/payee/payee_model.dart';
+// import 'package:flutter_boilerplate/domain/model/profile/profile_model.dart';
+// import 'package:flutter_boilerplate/domain/model/template_operation/template_operation_model.dart';
+// import 'package:flutter_boilerplate/domain/repository/account/account_repository.dart';
+// import 'package:flutter_boilerplate/domain/repository/category/category_repository.dart';
+// import 'package:flutter_boilerplate/domain/repository/label/label_repository.dart';
+// import 'package:flutter_boilerplate/domain/repository/payee/payee_repository.dart';
+// import 'package:flutter_boilerplate/domain/repository/profile/profile_repository.dart';
+// import 'package:flutter_boilerplate/domain/repository/template_operation/template_operation_repository.dart';
 // import 'package:provider/provider.dart';
 
 // class AppDataController extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_finance_flutter_3/core/domain/model/payee/payee_model.dart';
-import 'package:my_finance_flutter_3/ui/navigation/app_auto_router.gr.dart';
-import 'package:my_finance_flutter_3/ui/navigation/app_navigation.dart';
+import 'package:flutter_boilerplate/domain/model/payee/payee_model.dart';
+import 'package:flutter_boilerplate/ui/navigation/app_auto_router.gr.dart';
+import 'package:flutter_boilerplate/ui/navigation/app_navigation.dart';
 
 class AppRouter {
   AppRouter._();
