@@ -1,29 +1,31 @@
 import 'models.dart';
 
-FlavorType currentFlavorType = FlavorType.dev;
-
 class Flavor {
-  static FlavorType type = currentFlavorType;
-  static FlavorValues values = _getFlavorValues(currentFlavorType);
+  Flavor._();
 
-  static FlavorValues _getFlavorValues(FlavorType flavorType) {
-    FlavorValues flavorValues;
-    switch (flavorType) {
-      case FlavorType.dev:
-        flavorValues = _getFlavorDevValues();
+  static Flavor get instance => _instance ?? (_instance = Flavor._());
+  static FlavorValues get value => instance.flavorValue;
+
+  static Flavor? _instance;
+
+  FlavorValues flavorValue = _getFlavorDevValues();
+
+  void setupFlavor(String value) {
+    switch (value) {
+      case "development":
+        flavorValue = _getFlavorDevValues();
         break;
-      case FlavorType.production:
-        flavorValues = _getFlavorProdValues();
+      case "production":
+        flavorValue = _getFlavorProdValues();
         break;
       default:
-        flavorValues = _getFlavorDevValues();
+        flavorValue = _getFlavorDevValues();
     }
-
-    return flavorValues;
   }
 
   static FlavorValues _getFlavorDevValues() {
     return FlavorValues(
+      flavorType: FlavorType.dev,
       baseUrlRest: 'https://api.github.com',
       baseUrlGraphQL: 'https://api.github.com/graphql',
       githubToken: '',
@@ -32,6 +34,7 @@ class Flavor {
 
   static FlavorValues _getFlavorProdValues() {
     return FlavorValues(
+      flavorType: FlavorType.production,
       baseUrlRest: 'https://api.github.com',
       baseUrlGraphQL: 'https://api.github.com/graphql',
       githubToken: '',

@@ -6,7 +6,7 @@ import '../flavor/index.dart';
 class Log {
   Log._();
 
-  static final Logger _logger = _getLogger(Flavor.type);
+  static final Logger _logger = _getLogger(Flavor.value.flavorType);
 
   static void v(dynamic message, {String? tag}) {
     _logger.v(LogMessage(message: message, tag: tag));
