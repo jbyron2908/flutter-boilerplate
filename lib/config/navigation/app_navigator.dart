@@ -5,18 +5,18 @@ import 'package:flutter_boilerplate/ui/widget/picker_modal/picker_modal.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 class AppNavigator {
-  static Future<void> pushTo(
+  static Future<T?> pushTo<T>(
     BuildContext context, {
     required PageRouteInfo<dynamic> route,
   }) {
-    return context.router.push(route);
+    return context.router.push<T>(route);
   }
 
-  static Future<void> replaceTo(
+  static Future<T?> replaceTo<T>(
     BuildContext context, {
     required PageRouteInfo<dynamic> route,
   }) {
-    return context.router.replace(route);
+    return context.router.replace<T>(route);
   }
 
   static Future<bool> pop(

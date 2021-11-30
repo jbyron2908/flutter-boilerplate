@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_boilerplate/ui/pages/main/main_page.dart';
+import 'package:flutter_boilerplate/ui/pages/tab_counter/counter_home/counter_home_page.dart';
 import 'package:flutter_boilerplate/ui/pages/tab_counter/rx_counter/rx_counter_page.dart';
 import 'package:flutter_boilerplate/ui/pages/tab_hello_world/hello_world/hello_world_page.dart';
 
@@ -18,8 +19,12 @@ import 'package:flutter_boilerplate/ui/pages/tab_hello_world/hello_world/hello_w
           children: [
             AutoRoute(
               path: '',
-              page: RxCounterPage,
+              page: CounterHomePage,
               initial: true,
+            ),
+            AutoRoute(
+              path: 'rx_counter',
+              page: RxCounterPage,
             ),
           ],
         ),

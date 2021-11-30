@@ -15,4 +15,11 @@ class AppRouter {
       route: const MainRouter(),
     );
   }
+
+  static Future<void> pushToCounterHome(BuildContext context) {
+    return AppNavigator.pushTo(
+      context,
+      route: const RxCounterRoute(),
+    );
+  }
 }
