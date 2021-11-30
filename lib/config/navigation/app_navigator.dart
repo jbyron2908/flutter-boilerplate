@@ -4,7 +4,7 @@ import 'package:flutter_boilerplate/ui/widget/picker_modal/multi_picker_modal.da
 import 'package:flutter_boilerplate/ui/widget/picker_modal/picker_modal.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
-class AppNavigation {
+class AppNavigator {
   static Future<void> pushTo(
     BuildContext context, {
     required PageRouteInfo<dynamic> route,
@@ -59,25 +59,4 @@ class AppNavigation {
       },
     );
   }
-}
-
-class RoutePaths {
-  static const root = "/";
-
-  static const main = "/main";
-
-  static const debug = "/debug";
-
-  static const management = "/management";
-  static const profile = "/profile";
-  static const profileForm = "/profileform";
-  static const category = "/category";
-  static const categoryForm = "/categoryform";
-  static const payee = "/payee";
-  static const payeeForm = "/payeeform";
-
-  static const playground = "/playground";
-  static const counter = "/counter";
-  static const selectableList = "/selectable_list";
-  static const changeNotifier = "/change_notifier";
 }

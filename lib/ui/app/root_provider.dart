@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/config/navigation/app_router_observer.dart';
 import 'package:flutter_boilerplate/domain/repository/counter/counter_repository.dart';
-import 'package:flutter_boilerplate/ui/navigation/app_router_observer.dart';
 import 'package:flutter_boilerplate/ui/theme/app_theme.dart';
 import 'package:provider/provider.dart';
 
