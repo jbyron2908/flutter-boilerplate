@@ -7,10 +7,10 @@ import 'package:provider/provider.dart';
 class RootProvider extends StatelessWidget {
   const RootProvider({
     Key? key,
-    required this.child,
+    required this.builder,
   }) : super(key: key);
 
-  final Widget child;
+  final Widget Function(BuildContext context) builder;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class RootProvider extends StatelessWidget {
         ),
       ],
       builder: (context, _) {
-        return child;
+        return builder(context);
       },
     );
   }

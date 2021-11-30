@@ -10,35 +10,37 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AutoTabsScaffold(
-      routes: const [
-        HelloWorldRouter(),
-        CounterRouter(),
-      ],
-      builder: (context, child, animation) {
-        return WillPopScope(
-          onWillPop: () async {
-            var tabsRouter = context.tabsRouter;
-            var current = tabsRouter.topRoute as StackRouter;
+    return SafeArea(
+      child: AutoTabsScaffold(
+        routes: const [
+          HelloWorldRouter(),
+          CounterRouter(),
+        ],
+        builder: (context, child, animation) {
+          return WillPopScope(
+            onWillPop: () async {
+              var tabsRouter = context.tabsRouter;
+              var current = tabsRouter.topRoute as StackRouter;
 
-            if (current.stack.length > 1) {
-              await current.pop();
-            } else {
-              if (tabsRouter.activeIndex != 0) {
-                tabsRouter.setActiveIndex(0);
+              if (current.stack.length > 1) {
+                await current.pop();
               } else {
-                return true;
+                if (tabsRouter.activeIndex != 0) {
+                  tabsRouter.setActiveIndex(0);
+                } else {
+                  return true;
+                }
               }
-            }
 
-            return false;
-          },
-          child: child,
-        );
-      },
-      bottomNavigationBuilder: (_, tabsRouter) {
-        return buildBottomNavBar(tabsRouter);
-      },
+              return false;
+            },
+            child: child,
+          );
+        },
+        bottomNavigationBuilder: (_, tabsRouter) {
+          return buildBottomNavBar(tabsRouter);
+        },
+      ),
     );
   }
 

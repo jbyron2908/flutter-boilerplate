@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 import 'models.dart';
 
 class Flavor {
@@ -10,8 +12,8 @@ class Flavor {
 
   FlavorValues _flavorValue = _getFlavorDevValues();
 
-  void setupFlavor(String value) {
-    switch (value) {
+  void setupFlavor(String flavor) {
+    switch (flavor) {
       case "development":
         _flavorValue = _getFlavorDevValues();
         break;
@@ -26,18 +28,13 @@ class Flavor {
   static FlavorValues _getFlavorDevValues() {
     return FlavorValues(
       flavorType: FlavorType.dev,
-      baseUrlRest: 'https://api.github.com',
-      baseUrlGraphQL: 'https://api.github.com/graphql',
-      githubToken: '',
+      withDevicePreview: kIsWeb,
     );
   }
 
   static FlavorValues _getFlavorProdValues() {
     return FlavorValues(
       flavorType: FlavorType.production,
-      baseUrlRest: 'https://api.github.com',
-      baseUrlGraphQL: 'https://api.github.com/graphql',
-      githubToken: '',
     );
   }
 }
