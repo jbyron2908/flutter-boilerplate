@@ -1,3 +1,4 @@
+import 'package:flutter_boilerplate/config/flavor/flavor.dart';
 import 'package:flutter_boilerplate/config/log/tag_logger_printer.dart';
 import 'package:logger/logger.dart';
 

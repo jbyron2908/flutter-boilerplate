@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/config/di/di_helper.dart';
 import 'package:flutter_boilerplate/domain/repository/counter/counter_repository.dart';
 import 'package:provider/provider.dart';
 import 'package:rx_notifier/rx_notifier.dart';
 
 class RxCounter {
-  RxCounter(this.counterRepository);
+  RxCounter(this._counterRepository);
 
-  static RxCounter get(BuildContext context) => context.read<RxCounter>();
-
-  final CounterRepository counterRepository;
+  final CounterRepository _counterRepository;
 
   final count1 = RxNotifier(0);
   final count2 = RxNotifier(0);
 
   void increase1() {
-    count1.value = counterRepository.increment(count1.value);
+    count1.value = _counterRepository.increment(count1.value);
   }
 
   void increase2() {
-    count2.value = counterRepository.increment(count2.value);
+    count2.value = _counterRepository.increment(count2.value);
   }
 }
 
@@ -37,20 +36,20 @@ class RxCounterPage extends StatelessWidget {
           children: [
             RxBuilder(
               builder: (context) {
-                var count1 = context.read<RxCounter>().count1.value;
+                var count1 = DIHelper.get<RxCounter>(context).count1.value;
                 return Text('Counter 1: $count1');
               },
             ),
             ElevatedButton(
               onPressed: () {
-                var counter = context.read<RxCounter>();
+                var counter = DIHelper.get<RxCounter>(context);
                 counter.increase1();
               },
               child: const Text('Increase 1'),
             ),
             RxBuilder(
               builder: (context) {
-                var count2 = context.read<RxCounter>().count2.value;
+                var count2 = DIHelper.get<RxCounter>(context).count2.value;
                 return Text('Counter 2: $count2');
               },
             ),

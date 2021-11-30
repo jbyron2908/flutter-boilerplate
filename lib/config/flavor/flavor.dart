@@ -4,22 +4,22 @@ class Flavor {
   Flavor._();
 
   static Flavor get instance => _instance ?? (_instance = Flavor._());
-  static FlavorValues get value => instance.flavorValue;
+  static FlavorValues get value => instance._flavorValue;
 
   static Flavor? _instance;
 
-  FlavorValues flavorValue = _getFlavorDevValues();
+  FlavorValues _flavorValue = _getFlavorDevValues();
 
   void setupFlavor(String value) {
     switch (value) {
       case "development":
-        flavorValue = _getFlavorDevValues();
+        _flavorValue = _getFlavorDevValues();
         break;
       case "production":
-        flavorValue = _getFlavorProdValues();
+        _flavorValue = _getFlavorProdValues();
         break;
       default:
-        flavorValue = _getFlavorDevValues();
+        _flavorValue = _getFlavorDevValues();
     }
   }
 
