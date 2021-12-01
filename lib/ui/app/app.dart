@@ -7,27 +7,32 @@ import 'package:flutter_boilerplate/ui/navigation/app_auto_router.gr.dart';
 import 'package:provider/provider.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({
+  MyApp({
     Key? key,
   }) : super(key: key);
+
+  final appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
     return RootProvider(
       builder: (context) {
         var withDevicePreview = Flavor.value.withDevicePreview;
-        return withDevicePreview ? DevicePreviewApp() : RealApp();
+        return withDevicePreview
+            ? DevicePreviewApp(appRouter)
+            : RealApp(appRouter);
       },
     );
   }
 }
 
 class DevicePreviewApp extends StatelessWidget {
-  DevicePreviewApp({
+  const DevicePreviewApp(
+    this.appRouter, {
     Key? key,
   }) : super(key: key);
 
-  final appRouter = AppRouter();
+  final AppRouter appRouter;
 
   @override
   Widget build(BuildContext context) {
@@ -55,11 +60,12 @@ class DevicePreviewApp extends StatelessWidget {
 }
 
 class RealApp extends StatelessWidget {
-  RealApp({
+  const RealApp(
+    this.appRouter, {
     Key? key,
   }) : super(key: key);
 
-  final appRouter = AppRouter();
+  final AppRouter appRouter;
 
   @override
   Widget build(BuildContext context) {
