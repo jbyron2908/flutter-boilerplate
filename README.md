@@ -1,81 +1,40 @@
-# myFinance Flutter
+# Flutter Boilerplate
 
-## File structure
+## Setup
 
-    core
-      data_source
-        database
-        api
-      provider
-        feature
-        repository
-      util
-    ui
-      app
-      common
-      view
+    - Clone
+    - Change the name of the folder to your project
+    - Delete the folders: .git, android, ios, macos and web
+    - Execute the following commands in the project folder:
+      - `flutter create .`
+      - `dart pub run build_runner build --delete-conflicting-outputs`
 
 ## Dependencies
 
-    provider - Easy way to handle data for widgets
-    graphql_flutter - Client for GraphQL
-    moor - ORM for Sqflite
-    json_serializable - Serialize / Deserialize objects
+    provider
+      - Service locator
+    auto_route
+      - Navigation 2.0
+    device_preview
+      - Show the app in different screen settings
+    logger
+      - Logs with filters and styles
+    rx_notifier
+      - Reactive data
 
-## Instructions
+## Suggested dependencies
 
-### Setup
-
-    - Flutter I18n Json: Update
-      Generate I18n
-    - flutter packages pub run build_runner build --delete-conflicting-outputs
-      Generate .jorm (database) and .g (serializable) files
-
-### Moor ORM
-
-    - Create table
-    - Create dao
-    - Create declare tables and daos in DatabaseClient
-    - Generate .g file
-
-### Json Serializable
-
-    - Create domain
-    - Put annotations
-    - Generate .g file
-
-### vscode-flutter-i18n-json
-
-    - Usings vscode-flutter-i18n-json plugin
-    - Add strings to /i18n/*.json
-    - Run command "Flutter I18n Json: Update"
-    - Use generated class I18n
-
-### Naming
-
-    Model: Ui related data class
-    Entity: Database related data class
-    Domain: Api related data class
-
-### Provider Architecture
-
-    Global
-      DatabaseClient
-      ApiClient
-
-    DataSource
-      UserApi
-      CategoryApi
-      AccountApi
-      TransactionApi
-
-    AppState
-
-    Repository
-      UserRepository
-      CategoryRepository
-      AccountRepository
-      TransactionRepository
-
-    UI
-      CreateAccountViewModel
+    freezed
+      - Immutability
+    json_serializable
+      - Serialize / Deserialize objects
+    responsive_builder
+      - Handle ui for different screen settings
+    rxdart
+      - Streams with rx operators
+    dartx
+      - Helpful extension functions
+    font_awesome_flutter
+      - Great icons
+    modal_bottom_sheet
+      - Show modals
