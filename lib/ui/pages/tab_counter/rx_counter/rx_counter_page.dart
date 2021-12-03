@@ -19,7 +19,7 @@ class RxCounterPage extends StatelessWidget {
               RxBuilder(
                 builder: (context) {
                   var count1 = RxCounterDI.getCount1(context);
-                  return Text('Counter 1: ${count1.value}');
+                  return Text('Counter 1: $count1');
                 },
               ),
               ElevatedButton(
@@ -31,8 +31,8 @@ class RxCounterPage extends StatelessWidget {
               ),
               RxBuilder(
                 builder: (context) {
-                  RxNotifier<int> count2 = RxCounterDI.getCount2(context);
-                  return Text('Counter 2: ${count2.value}');
+                  var count2 = RxCounterDI.getCount2(context);
+                  return Text('Counter 2: $count2');
                 },
               ),
               ElevatedButton(

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/config/di/di_helper.dart';
 import 'package:flutter_boilerplate/ui/pages/tab_counter/rx_counter/rx_counter_bloc.dart';
 import 'package:provider/provider.dart';
-import 'package:rx_notifier/rx_notifier.dart';
 
 class RxCounterDI extends StatelessWidget {
   const RxCounterDI({
@@ -23,9 +22,9 @@ class RxCounterDI extends StatelessWidget {
   static RxCounterBloc getBloc(BuildContext context) =>
       DIHelper.get<RxCounterBloc>(context);
 
-  static RxNotifier<int> getCount1(BuildContext context) =>
+  static int getCount1(BuildContext context) =>
       DIHelper.get<RxCounterBloc>(context).count1;
 
-  static RxNotifier<int> getCount2(BuildContext context) =>
+  static int getCount2(BuildContext context) =>
       DIHelper.get<RxCounterBloc>(context).count2;
 }

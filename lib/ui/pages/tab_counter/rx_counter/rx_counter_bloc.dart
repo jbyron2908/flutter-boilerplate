@@ -6,14 +6,17 @@ class RxCounterBloc {
 
   final CounterRepository _counterRepository;
 
-  final RxNotifier<int> count1 = RxNotifier(0);
-  final RxNotifier<int> count2 = RxNotifier(0);
+  final RxNotifier<int> _count1 = RxNotifier(0);
+  int get count1 => _count1.value;
+
+  final RxNotifier<int> _count2 = RxNotifier(0);
+  int get count2 => _count2.value;
 
   void increase1() {
-    count1.value = _counterRepository.increment(count1.value);
+    _count1.value = _counterRepository.increment(_count1.value);
   }
 
   void increase2() {
-    count2.value = _counterRepository.increment(count2.value);
+    _count2.value = _counterRepository.increment(_count2.value);
   }
 }
