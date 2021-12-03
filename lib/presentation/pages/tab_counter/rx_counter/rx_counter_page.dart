@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/ui/pages/tab_counter/rx_counter/rx_counter_bloc.dart';
-import 'package:flutter_boilerplate/ui/pages/tab_counter/rx_counter/rx_counter_di.dart';
+import 'package:flutter_boilerplate/presentation/pages/tab_counter/rx_counter/rx_counter_bloc.dart';
+import 'package:flutter_boilerplate/presentation/pages/tab_counter/rx_counter/rx_counter_di.dart';
 import 'package:rx_notifier/rx_notifier.dart';
 
 class RxCounterPage extends StatelessWidget {

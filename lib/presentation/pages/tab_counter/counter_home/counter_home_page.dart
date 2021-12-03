@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/ui/navigation/app_router.dart';
+import 'package:flutter_boilerplate/presentation/navigation/app_router.dart';
 
 class CounterHomePage extends StatelessWidget {
   const CounterHomePage({

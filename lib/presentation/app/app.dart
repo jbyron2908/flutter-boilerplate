@@ -2,8 +2,8 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/config/flavor/index.dart';
 import 'package:flutter_boilerplate/config/navigation/app_router_observer.dart';
-import 'package:flutter_boilerplate/ui/app/root_provider.dart';
-import 'package:flutter_boilerplate/ui/navigation/app_auto_router.gr.dart';
+import 'package:flutter_boilerplate/presentation/app/root_provider.dart';
+import 'package:flutter_boilerplate/presentation/navigation/app_auto_router.gr.dart';
 import 'package:provider/provider.dart';
 
 class MyApp extends StatelessWidget {

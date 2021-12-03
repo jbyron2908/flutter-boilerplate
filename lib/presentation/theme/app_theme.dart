@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/ui/theme/toolbar/toolbar_theme.dart';
+import 'package:flutter_boilerplate/presentation/theme/toolbar/toolbar_theme.dart';
 import 'package:provider/provider.dart';
 
 class AppThemeProvider with ChangeNotifier {

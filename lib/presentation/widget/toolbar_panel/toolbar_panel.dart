@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/ui/theme/toolbar/toolbar_theme.dart';
-import 'package:flutter_boilerplate/ui/widget/helper/ui_helpers.dart';
-import 'package:flutter_boilerplate/ui/widget/toolbar_panel/toolbar_panel_bloc.dart';
+import 'package:flutter_boilerplate/presentation/theme/toolbar/toolbar_theme.dart';
+import 'package:flutter_boilerplate/presentation/widget/helper/ui_helpers.dart';
+import 'package:flutter_boilerplate/presentation/widget/toolbar_panel/toolbar_panel_bloc.dart';
 import 'package:provider/provider.dart';
 
 class ToolbarPanel extends StatelessWidget {

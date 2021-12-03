@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/ui/theme/app_theme.dart';
+import 'package:flutter_boilerplate/presentation/theme/app_theme.dart';
 
 class ToolbarTheme {
   static ToolbarTheme of(BuildContext context) {

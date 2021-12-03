@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/ui/widget/toolbar_panel/toolbar_panel_bloc.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_boilerplate/presentation/widget/bottom_nav_bar/bottom_nav_bar.dart';
 
-class ToolbarScrollObserver extends StatelessWidget {
-  const ToolbarScrollObserver({
+class BottomNavBarScrollObserver extends StatelessWidget {
+  const BottomNavBarScrollObserver({
     Key? key,
     required this.child,
   }) : super(key: key);
@@ -27,11 +26,11 @@ class ToolbarScrollObserver extends StatelessWidget {
     BuildContext context,
     ScrollUpdateNotification scrollNotification,
   ) {
-    var bloc = context.read<ToolbarPanelBloc>();
+    var bloc = BottomNavBar.of(context);
     var dy = scrollNotification.dragDetails?.delta.dy ?? 0;
-    if (dy > 0 && bloc.isHidden) {
+    if (dy > 0 && !bloc.isVisible) {
       bloc.show();
-    } else if (dy < 0 && !bloc.isHidden) {
+    } else if (dy < 0 && bloc.isVisible) {
       bloc.hide();
     }
   }

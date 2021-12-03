@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter_boilerplate/ui/pages/main/main_page.dart';
-import 'package:flutter_boilerplate/ui/pages/tab_counter/counter_home/counter_home_page.dart';
-import 'package:flutter_boilerplate/ui/pages/tab_counter/rx_counter/rx_counter_page.dart';
-import 'package:flutter_boilerplate/ui/pages/tab_hello_world/hello_world/hello_world_page.dart';
+import 'package:flutter_boilerplate/presentation/pages/main/main_page.dart';
+import 'package:flutter_boilerplate/presentation/pages/tab_counter/counter_home/counter_home_page.dart';
+import 'package:flutter_boilerplate/presentation/pages/tab_counter/rx_counter/rx_counter_page.dart';
+import 'package:flutter_boilerplate/presentation/pages/tab_hello_world/hello_world/hello_world_page.dart';
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',

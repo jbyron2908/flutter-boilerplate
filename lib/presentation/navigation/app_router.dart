@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/config/navigation/app_navigator.dart';
-import 'package:flutter_boilerplate/ui/navigation/app_auto_router.gr.dart';
+import 'package:flutter_boilerplate/presentation/navigation/app_auto_router.gr.dart';
 
 class AppRouter {
   AppRouter._();
