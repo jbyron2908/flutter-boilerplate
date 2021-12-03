@@ -21,6 +21,10 @@
       - Logs with filters and styles
     rx_notifier
       - Reactive data
+    font_awesome_flutter
+      - Great icons
+    modal_bottom_sheet
+      - Show modals
 
 ## Suggested dependencies
 
@@ -34,7 +38,3 @@
       - Streams with rx operators
     dartx
       - Helpful extension functions
-    font_awesome_flutter
-      - Great icons
-    modal_bottom_sheet
-      - Show modals

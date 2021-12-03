@@ -37,6 +37,9 @@ class DevicePreviewApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DevicePreview(
+      tools: [
+        ...DevicePreview.defaultTools,
+      ],
       builder: (context) {
         var routerObserverRegister = context.read<AppRouterObserverRegister>();
 

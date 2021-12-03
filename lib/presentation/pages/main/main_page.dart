@@ -17,25 +17,7 @@ class MainPage extends StatelessWidget {
           CounterRouter(),
         ],
         builder: (context, child, animation) {
-          return WillPopScope(
-            onWillPop: () async {
-              var tabsRouter = context.tabsRouter;
-              var current = tabsRouter.topRoute as StackRouter;
-
-              if (current.stack.length > 1) {
-                await current.pop();
-              } else {
-                if (tabsRouter.activeIndex != 0) {
-                  tabsRouter.setActiveIndex(0);
-                } else {
-                  return true;
-                }
-              }
-
-              return false;
-            },
-            child: child,
-          );
+          return child;
         },
         bottomNavigationBuilder: (_, tabsRouter) {
           return buildBottomNavBar(tabsRouter);
@@ -52,17 +34,24 @@ class MainPage extends StatelessWidget {
         BottomNavBarItem(
           activeColor: Colors.blue,
           title: const Text('Hello World'),
-          icon: const Icon(Icons.access_alarm),
+          icon: const Icon(Icons.home),
         ),
         BottomNavBarItem(
           activeColor: Colors.blue,
           title: const Text('Counter'),
-          icon: const Icon(Icons.ac_unit),
+          icon: const Icon(Icons.calculate),
         ),
       ],
       selectedIndex: tabsRouter.activeIndex,
       onIndexChange: (index) async {
-        tabsRouter.setActiveIndex(index);
+        if (index == tabsRouter.activeIndex) {
+          var topRouter = tabsRouter.topRoute.router;
+          while (topRouter.canPopSelfOrChildren) {
+            await topRouter.pop();
+          }
+        } else {
+          tabsRouter.setActiveIndex(index);
+        }
       },
     );
   }
